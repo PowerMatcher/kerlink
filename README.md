@@ -91,7 +91,7 @@ Two Restful APIs (POST and GET) are provided to consume and produce parameters r
    </Device>
 </Battery>
 ```
-curl -X GET http://osm.procan-group.com/Battery/rest/batt/ : if the server returns a 200 OK, the HTTP body includes all batteries and their states (see below)
+`curl -X GET http://osm.procan-group.com/Battery/rest/batt/` : if the server returns a 200 OK, the HTTP body includes all batteries and their states (see below)
 ```
 <Battery>
     <Device>

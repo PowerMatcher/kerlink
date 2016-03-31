@@ -16,9 +16,11 @@ Node: EMS
 |-----------------------------|-----------------------------------------------------------------|
 |with:                        | Energy Unit including PV node, Battery node, ChargingPoint node |
 |processes requests for some: |	Algorithm for providing optimal way to control the usage profile of devices | 
+|about/on resource:	| Usage Control algorithm where the objective is to determine an equilibrium price for the energy. |
 |expected message content:    | Device “State” -> preferred format --> XML |
 |preferred request format:    | -> preferred format --> XML |
-|response format:	     | The powermatcher server provides “Control Parameters” which define the usage profile of the devices, | 					
+|response format:	     | The powermatcher server provides “Control Parameters” which define the usage profile of the devices,i.e. when a device should start or stop.
+-> preferred format --> XML | 					
 
 # PV Panel
 

@@ -164,7 +164,7 @@ Two Restful APIs (POST and GET) are provided to consume and produce parameters r
 # Forecast Estimation 
 Two Restful APIs (POST and GET) are provided to consume and produce parameters regarding  forecast estimation . These APIs generates XML as descibed below. In the next release, these APIs will be able to use RDF, in conformance with the SEAS knowledge model.
 + `POST`:
-`curl -X POST -d "ts={ts}& temperature={temperature}&wind={wind}& Humidity={Humidity}"` : http://osm.procan-group.com/ForecastEstimation/rest/estimate : the {ts} parameter represents the timestamp of the  forecasting . Then the server returns a 202 Accepted.
+`curl -X POST -d "ts={ts}& temperature={temperature}&wind={wind}& Humidity={Humidity}" : http://osm.procan-group.com/ForecastEstimation/rest/estimate` : the {ts} parameter represents the timestamp of the  forecasting . Then the server returns a 202 Accepted.
 + `GET`:
 `curl -X GET http://osm.procan-group.com/ForecastEstimation/rest/estimate` : if the server returns a 200 OK, the HTTP body includes all the forecasting parameters (see below)
 ```

@@ -8,7 +8,7 @@ The EMS  Server defines two interactions with Clients :
 + Client requests for the execution of the charge optimization algorithm
 + Client requests for the result of the algorithm
 
-# Description of EMS Server 
+## Description of EMS Server 
 
 Node: EMS
 
@@ -122,4 +122,58 @@ Two Restful APIs (POST and GET) are provided to consume and produce parameters r
 ```
 
 # CarChargingPoint
-coming soon
+ Two Restful APIs (POST and GET) are provided to consume and produce parameters regarding  charging of  the car . These APIs generates XML as descibed below. In the next release, these APIs will be able to use RDF, in conformance with the SEAS knowledge model.
++ `POST`: 
+`curl -X POST -d "ts={ts}&device_id={device_id}&consumption={ consumption}" http://osm.procan-group.com/CarCharging/rest/point `: the {ts} parameter represents the timestamp of the car  charging, the {device_id} parameter represents the id of the charging point , the {consumption} parameter represents the energy consumption  value. Then the server returns a 202 Accepted.
++ `GET`: 
+`curl -X GET http://osm.procan- group.com/CarCharging/rest/point/{device_id} `: the {device_id} parameter represents the id of the charging point. Then if the server returns a 200 OK, the HTTP body represents the response and includes the consumption of a given  charging point (see below)
+```
+<CarChargingPoint>
+  <Device>
+     <ts>1458001200</ts>
+     <DeviceId>00031614</DeviceId>
+     <Consumption>1916.85</Consumption>
+   </Device>
+</CarChargingPoint>
+```
+`curl -X GET http://osm.procan-group.com/CarCharging/rest/point/` : if the server returns a 200 OK, the HTTP body includes all  car charging points  and their  consumptions (see below)
+```
+<CarChargingPoint>
+    <Device>
+        <ts>1458001200</ts>
+        <DeviceId>00031614</DeviceId>
+        <Consumption>1916.85</Consumption>
+    </Device>
+    <Device>
+        <ts>1458001800</ts>
+        <DeviceId>00031614</DeviceId>
+        <Consumption>2570.83</Consumption>
+    </Device>
+    <Device>
+        <ts>1458002400</ts>
+        <DeviceId>00031614</DeviceId>
+        <Consumption>3196.07</Consumption>
+    </Device>
+    <Device>
+        <ts>1458003000</ts>
+        <DeviceId>00031614</DeviceId>
+        <Consumption>3761.39</Consumption>
+    </Device>
+</CarChargingPoint>
+```
+# Forecast Estimation 
+Two Restful APIs (POST and GET) are provided to consume and produce parameters regarding  forecast estimation . These APIs generates XML as descibed below. In the next release, these APIs will be able to use RDF, in conformance with the SEAS knowledge model.
++ `POST`:
+`curl -X POST -d "ts={ts}& temperature={temperature}&wind={wind}& Humidity={Humidity}"` : http://osm.procan-group.com/ForecastEstimation/rest/estimate : the {ts} parameter represents the timestamp of the  forecasting . Then the server returns a 202 Accepted.
++ `GET`:
+`curl -X GET http://osm.procan-group.com/ForecastEstimation/rest/estimate` : if the server returns a 200 OK, the HTTP body includes all the forecasting parameters (see below)
+```
+<ForecastEstimation>
+     <ts>1458001200</ts>
+     <Temperature>6.2</Temperature>
+     <Wind>5.8</Wind>
+     <Humidity>7.9</Humidity>
+</ForecastEstimation>
+```
+
+ 

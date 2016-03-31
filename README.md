@@ -13,6 +13,7 @@ The EMS  Server defines two interactions with Clients :
 Node: EMS
 
 |interacts as:                | Server|
+|-----------------------------|-----------------------------------------------------------------|
 |with:                        | Energy Unit including PV node, Battery node, ChargingPoint node |
 |processes requests for some: |	Algorithm for providing optimal way to control the usage profile of devices | 
 |about/on resource:	| Usage Control algorithm where the objective is to determine an equilibrium price for the energy. |

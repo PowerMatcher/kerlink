@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add pv</title>
+</head>
+<body>
+	<div style="padding-left:100px;font-family: monospace;">
+		<h2>Add pv</h2>
+		<form action="rest/pvs" method="POST">
+			<div style="width: 200px; text-align: left;">
+				<div style="padding:10px;">
+					Ts: <input name="ts" type="number" required/>
+				</div>
+				<div style="padding:10px;">
+					Device Id: <input name="device_id" required />
+				</div>
+				<div style="padding:10px;">
+					Production: <input name="production" type="number" step="any" required/>
+				</div>
+				<div style="padding:10px;text-align:center">
+					<input type="submit" value="Submit" />
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

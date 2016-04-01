@@ -1,6 +1,6 @@
-# Kerlink-EMS on Microgrids
+# Kerlink-EMS on autoproduction
 
-Four  web services are defined for Kerlink-EMS  on Microgrids including PV Panel, Battery , CarChargingPoint  and forecast estimation  web services. These services are running within an EMS server to interact with energy units and devices like PV Panel and Battery.  In the next release, the operations will also be able to consume or produce RDF, in conformance with the SEAS knowledge model.SPARQL-Generate protocol will be used to describe how RDF may be generated from XML.
+Four  web services are defined for Kerlink-EMS  on autoproduction including PV Panel, Battery , CarChargingPoint  and forecast estimation  web services. These services are running within an EMS server to interact with energy units and devices like PV Panel and Battery.  In the next release, the operations will also be able to consume or produce RDF, in conformance with the SEAS knowledge model.SPARQL-Generate protocol will be used to describe how RDF may be generated from XML.
 
 # EMS Server
 

@@ -121,7 +121,7 @@ Two Restful APIs (POST and GET) are provided to consume and produce parameters r
 </Battery>
 ```
 
-# CarChargingPoint
+# ChargingPoint
  Two Restful APIs (POST and GET) are provided to consume and produce parameters regarding  charging of  the car . These APIs generates XML as descibed below. In the next release, these APIs will be able to use RDF, in conformance with the SEAS knowledge model.
 + `POST`: 
 `curl -X POST -d "ts={ts}&device_id={device_id}&consumption={ consumption}" http://osm.procan-group.com/CarCharging/rest/point `: the {ts} parameter represents the timestamp of the car  charging, the {device_id} parameter represents the id of the charging point , the {consumption} parameter represents the energy consumption  value. Then the server returns a 202 Accepted.
